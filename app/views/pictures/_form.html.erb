@@ -11,12 +11,16 @@
     </div>
   <% end %>
 
+# app/views/pictures/_form.html.erb
+  ...
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :picture_name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
-
+  <div class="field">
+    <%= f.file_field :photo %>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
