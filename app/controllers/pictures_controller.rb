@@ -9,9 +9,11 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1
   # GET /pictures/1.json
+   
   def show
+    @article = Picture.find(params[:id])
   end
-
+  
   # GET /pictures/new
   def new
     @picture = Picture.new
@@ -19,6 +21,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
+    @article = Picture.find(params[:id])
   end
 
   # POST /pictures
